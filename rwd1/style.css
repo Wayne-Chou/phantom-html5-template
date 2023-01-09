@@ -95,6 +95,7 @@
 .content{
     max-width: 1200px;
     margin: 0 auto 80px;
+    padding:10px;
 }
 .h1-title{
     text-align: center;
