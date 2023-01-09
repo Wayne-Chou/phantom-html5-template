@@ -143,6 +143,7 @@
     font-weight: 400;
     line-height: 1.5;
     padding: 18px 0;
+   
 }
 .p-text.active{
     display: block;
@@ -228,11 +229,19 @@
    width: 70%;
    margin: 0 auto;
 }
+.footer-item:last-child{
+    width: 260px;
+}
 .footer-title,.footer-link,.footer-text{
     color:#fff;
 }
 .footer-link{
     text-decoration: none;
+    display: block;
+    padding: 15px 0;
+}
+.footer-text{
+    padding: 15px 0;
 }
 .footer-item{
     gap:10px;
