@@ -126,14 +126,11 @@
     color: #575757;
 }
 .a-title{
-    display: block;
     color: #575757;
     border-top: 1px solid #EAEAEA;
     font-size: 14px;
     padding: 18px 0;
     line-height: 1.5;
-    display: flex;
-    align-items: center;
     cursor: pointer;
     
 }
