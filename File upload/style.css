@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #5256ad;
+}
+.drag-area{
+    border:2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drag-area.active{
+    border:2px solid #fff;
+}
+.drag-area .icon{
+    font-size: 100px;
+    color:#fff;
+}
+.drag-area header{
+    font-size: 25px;
+    color:#fff;
+    margin: 10px 0 15px 0;
+}
+.drag-area span{
+    font-size: 25px;
+    color:#fff;
+    margin: 10px 0 15px 0;
+}
+.drag-area button{
+    font-size: 20px;
+    color:#fff;
+    padding: 10px  25px;
+    border:none;
+    outline: none;
+    background: #fff;
+    color:#5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
