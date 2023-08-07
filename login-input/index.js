@@ -1,103 +1,71 @@
-const form = document.querySelector("form");
-const typelist = form.querySelector(".typelist");
-const nameTit = form.querySelector(".name");
-const phone= form.querySelector(".phone");
-const amount = form.querySelector(".amount");
-const payment = form.querySelector(".payment");
-const listText = form.querySelector(".list-text");
-const nameText =form.querySelector(".name-text");
-const phoneText = form.querySelector(".phone-text");
-const amoutText = form.querySelector(".amout-text");
-const paymentText = form.querySelector(".payment-text");
-
-const btnText = document.querySelector(".form-btn .btn-text");
-
-const btn = document.querySelector(".form-btn");
+let listText = document.querySelector(".list-text");
+let nameText = document.querySelector(".name-text");
+let phoneText = document.querySelector(".phone-text");
+let amoutText = document.querySelector(".amout-text");
+let paymentText = document.querySelector(".payment-text");
 
 
-function list(){
-   var value = form.querySelector('.typelist').value;
-    if (value === "") {
-        typelist.classList.add("invalid");
-        listText.innerText="必填";
+
+
+document.querySelector('.form-btn').addEventListener('click', function () {
+    validateForm();
+});
+
+function validateForm() {
+    let typelistInput = document.querySelector('.typelist');
+    let nameInput = document.querySelector('.name');
+    let phoneInput = document.querySelector('.phone');
+    let amountInput = document.querySelector('.amount');
+    let paymentInput = document.querySelector('.payment');
+
+
+    document.querySelector('.list-text').innerText = "";
+    document.querySelector('.name-text').innerText = "";
+    document.querySelector('.phone-text').innerText = "";
+    document.querySelector('.amout-text').innerText = "";
+    document.querySelector('.payment-text').innerText = "";
+    document.querySelectorAll(".invalid").forEach((e) => {
+        e.classList.remove("invalid")
+    })
+
+    let validOptions = Array.from(document.getElementById('typelist').options).map(option => option.value);
+    if (typelistInput.value === "") {
+        typelistInput.classList.add("invalid");
+        listText.innerText = "必填";
+    } else if (!validOptions.includes(typelistInput.value)) {
+        listText.innerText = "填選選單的值";
+
     }
-   
-}
 
-
-
-// else if(!value === "store1" || "store2" || "store3"){
-//     typelist.classList.add("invalid");
-//     listText.innerText="請填選項內的值";
-// }
-
-function nameTitle(){
-    
-    var val = form.querySelector(".name").value;
-    if(val === "" || val===/[^a-zA-Z\u4e00-\u9fa5]/g){
-        nameTit.classList.add("invalid");
-        // alert('Please enter a valid');
-        nameText.innerText="請輸入完整的名字";
+    let name = /^[A-Za-z\u4e00-\u9fa5\s]+$/;
+    if (nameInput.value === "") {
+        nameInput.classList.add("invalid");
+        nameText.innerText = "必填";
+    } else if (!name.test(nameInput.value)) {
+        nameText.innerText = "請輸入中英文";
     }
-    
-}
 
 
-function phoneNumber(){
-    
-    var val = form.querySelector(".phone").value;
-    if(val === ""){
-        phone.classList.add("invalid");
-        // alert('Please enter a valid');
-        phoneText.innerText="請輸入手機號碼";
+    let phone = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+    if (phoneInput.value === "") {
+        phoneInput.classList.add("invalid");
+        phoneText.innerText = "必填";
+    } else if (!phone.test(phone.value)) {
+        phoneText.innerText = "只能填寫手機號碼";
     }
-  
-}
 
-function Amount(){
-    
-    var val = form.querySelector(".amount").value;
-    if(val === ""){
-        amount.classList.add("invalid");
-        
-        amoutText.innerText="必填";
-    }else if(val <= 0){
-        amount.classList.add("invalid");
-        amoutText.innerText="不能小於0";
+    let amount = /^[0-9]+$/;
+    if (amountInput.value === "") {
+        amountInput.classList.add("invalid");
+        amoutText.innerText = "必填";
+    } else if (!amount.test(amountInput.value) || Number(amountInput.value) < 0) {
+        amoutText.innerText = "必須是大於等於0的數字";
     }
-  
-}
 
-
-
-function Payment(){
-    
-    var val = form.querySelector(".payment").value;
-    if(val === ""){
-        payment.classList.add("invalid");
-        
-        paymentText.innerText="必填";
+    if (paymentInput.value === "") {
+        paymentInput.classList.add("invalid");
+        paymentText.innerText = "必填";
     }
-    
+
+
 }
-
-
-
-
-
-
-btn.addEventListener("click",(e)=>{
-    e.preventDefault();
-    btn.classList.add("checked");
-    btnText.textContent = "success";
-    list();
-    nameTitle();
-    phoneNumber();
-    Amount();
-    Payment();
-})
-
-
-
-
-
