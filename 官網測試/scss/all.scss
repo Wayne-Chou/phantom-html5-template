@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("bac/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* fixed */
+.fixeds-box {
+  position: fixed;
+  top: 0;
+  right: 120px;
+  background: #ffee57;
+  max-width: 141px;
+  width: 100%;
+  height: 932px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  border-radius: 100px;
+
+  .fixed-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+    .number {
+      font-size: 40px;
+      font-family: "Noto Sans SC";
+      border: 5px solid #ff922d;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      text-align: center;
+      line-height: 68px;
+      background: #fff;
+      color: #ff922d;
+      font-weight: bold;
+    }
+
+    .des {
+      background: #187fc4;
+      width: 100px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      color: #fff;
+      border-radius: 20px;
+      font-family: "Noto Sans SC";
+    }
+  }
+}
+
+.carousel-box {
+  position: relative;
+  .carousel-img {
+    position: absolute;
+    bottom: 44%;
+    left: 5%;
+  }
+  .carousel-items {
+    position: absolute;
+    bottom: 20%;
+  }
+  .carousel-item-tree {
+    z-index: 2;
+    position: relative;
+  }
+  .carousel-item-monster {
+    position: relative;
+    z-index: 1;
+    left: -40%;
+  }
+}
+
+// 測試2
+.carousel-box-2 {
+  background-image: url("bac/island1-1\ 1.png");
+
+  background-repeat: no-repeat;
+
+  min-height: 1200px;
+  position: relative;
+  .carousel-img-2 {
+    position: absolute;
+    top: 7%;
+    left: 5%;
+  }
+  .carousel-items-2 {
+    position: absolute;
+    bottom: 24%;
+    .carousel-item-tree-2 {
+      position: relative;
+      z-index: 1;
+    }
+    .carousel-item-monster-2 {
+      position: relative;
+      left: -40%;
+    }
+  }
+}
+
+.entertainment-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 500px;
+
+  .entertainment-island {
+    position: relative;
+  }
+  .entertainment-island .entertainment-tent {
+    position: absolute;
+    top: -43%;
+    left: 26%;
+  }
+  .entertainment-island .entertainment-monster {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+  }
+}
+
+.train-box {
+  position: relative;
+  margin-top: 500px;
+  .train-img {
+    position: absolute;
+    top: -40%;
+  }
+  .train-monster {
+    position: absolute;
+    top: -100%;
+    left: 15%;
+    z-index: -1;
+  }
+}
+
+.FerrisWheel-box {
+  position: relative;
+  margin-top: 900px;
+  .FerrisWheel-island {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .FerrisWheel-img {
+    position: absolute;
+    top: -133%;
+    right: 12%;
+  }
+  .FerrisWheel-monster {
+    position: absolute;
+    right: 20%;
+    top: 50%;
+  }
+}
+
+.castle-box {
+  position: relative;
+  margin-top: 400px;
+  .castle-img {
+    position: absolute;
+    top: -73%;
+    left: 5%;
+  }
+  .castle-monster {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    overflow: hidden;
+    height: 100px;
+  }
+}
