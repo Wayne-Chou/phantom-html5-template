@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("bac/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+
+// 星球
+.planet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  img {
+    width: 100%;
+  }
+}
+.box {
+  padding-top: 420px;
+
+  position: relative;
+  .Carousel {
+    position: absolute;
+    left: 3%;
+  }
+  .castles {
+    position: absolute;
+    left: 30%;
+    top: 103%;
+  }
+  .circus {
+    position: absolute;
+    right: 0;
+  }
+  .train {
+    position: absolute;
+    top: 213%;
+    left: -25%;
+  }
+}

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("bac/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+
+.planet {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.planet img {
+  width: 100%;
+}
+
+.box {
+  padding-top: 420px;
+  position: relative;
+}
+.box .Carousel {
+  position: absolute;
+  left: 3%;
+}
+.box .castles {
+  position: absolute;
+  left: 30%;
+  top: 103%;
+}
+.box .circus {
+  position: absolute;
+  right: 0;
+}
+.box .train {
+  position: absolute;
+  top: 213%;
+  left: -25%;
+}/*# sourceMappingURL=amusement-park-Interaction.css.map */
